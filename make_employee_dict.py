@@ -21,7 +21,7 @@ class Employee:
         """Returns the name of employee."""
         return self._name
 
-    def get_id_number(self):
+    def get_ID_number(self):
         """Returns ID number of employee."""
         return self._id_number
 
@@ -45,3 +45,9 @@ def make_employee_dict(names, ids, sals, emails):
         emp_dic[ids[data]] = employee
     return emp_dic
 
+emp_names = ["Jean", "Kat", "Pomona"]
+emp_ids = ["100", "101", "102"]
+emp_sals = [30, 35, 28]
+emp_emails = ["Jean@aol.com", "Kat@aol.com", "Pomona@aol.com"]
+result = make_employee_dict(emp_names, emp_ids, emp_sals, emp_emails)
+print(result["100"].get_name())
