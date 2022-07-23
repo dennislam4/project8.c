@@ -12,26 +12,26 @@ class Employee:
     """
     def __init__(self, name, id_number, salary, email_address):
         """Initializes employee's personal information. """
-        self.__name = name
-        self.__id_number = id_number
-        self.__salary = salary
-        self.__email_address = email_address
+        self._name = name
+        self._id_number = id_number
+        self._salary = salary
+        self._email_address = email_address
 
     def get_name(self):
         """Returns the name of employee."""
-        return self.__name()
+        return self._name
 
     def get_id_number(self):
         """Returns ID number of employee."""
-        return self.__id_number()
+        return self._id_number
 
     def get_salary(self):
         """Returns salary of employee."""
-        return self.__salary()
+        return self._salary
 
     def get_email_address(self):
         """Returns the e-mail address of employee."""
-        return self.__email_address()
+        return self._email_address
 
 
 def make_employee_dict(names, ids, sals, emails):
@@ -45,3 +45,9 @@ def make_employee_dict(names, ids, sals, emails):
         emp_dic[ids[data]] = employee
     return emp_dic
 
+emp_names = ["Jean", "Kat", "Pomona"]
+emp_ids = ["100", "101", "102"]
+emp_sals = [30, 35, 28]
+emp_emails = ["Jean@aol.com", "Kat@aol.com", "Pomona@aol.com"]
+result = make_employee_dict(emp_names, emp_ids, emp_sals, emp_emails)
+print(result["100"].get_name())
