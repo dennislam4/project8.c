@@ -8,7 +8,7 @@
 
 class Employee:
     """
-    Represents an employee's personal information with their name, ID number, salary and email
+    Represents an employee's personal information with their name, ID number, salary and email.
     """
     def __init__(self, name, id_number, salary, email_address):
         """Initializes employee's personal information. """
