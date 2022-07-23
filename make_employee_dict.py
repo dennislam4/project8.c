@@ -10,10 +10,10 @@ class Employee:
     """
     Represents an employee's personal information with their name, ID number, salary and email.
     """
-    def __init__(self, name, id_number, salary, email_address):
+    def __init__(self, name, ID_number, salary, email_address):
         """Initializes employee's personal information. """
         self._name = name
-        self._id_number = id_number
+        self._ID_number = ID_number
         self._salary = salary
         self._email_address = email_address
 
@@ -23,7 +23,7 @@ class Employee:
 
     def get_ID_number(self):
         """Returns ID number of employee."""
-        return self._id_number
+        return self._ID_number
 
     def get_salary(self):
         """Returns salary of employee."""
@@ -34,13 +34,13 @@ class Employee:
         return self._email_address
 
 
-def make_employee_dict(names, ids, sals, emails):
+def make_employee_dict(names, IDs, sals, emails):
     """
     Function that creates employee objects and adds it to a dictionary where employee ID
     number is the key and value is the created employee object.
     """
     emp_dic = {}
     for data in range(len(names)):
-        employee = Employee(names[data], ids[data], sals[data], emails[data])
-        emp_dic[ids[data]] = employee
+        employee = Employee(names[data], IDs[data], sals[data], emails[data])
+        emp_dic[IDs[data]] = employee
     return emp_dic
